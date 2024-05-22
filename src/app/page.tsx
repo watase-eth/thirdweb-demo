@@ -16,6 +16,7 @@ export default function Home() {
   const account = useActiveAccount();
   const status = useActiveWalletConnectionStatus();
 
+  // Set chainID in .env file
   const chain = defineChain(parseInt(process.env.NEXT_PUBLIC_CHAIN_ID || ""));
 
   const [loginType, setLoginType] = useState("traditional");
